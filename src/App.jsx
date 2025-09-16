@@ -220,7 +220,7 @@ export default function YogaRecommenderApp() {
             <img 
               src="/yogatools_logo1.png" 
               alt="YogaTools.ai" 
-              style={{ height: '64px', width: 'auto', objectFit: 'contain', maxWidth: '400px' }}
+              style={{ height: '160px', width: 'auto', objectFit: 'contain', maxWidth: '800px' }}
             />
           </div>
         </div>
@@ -503,7 +503,7 @@ export default function YogaRecommenderApp() {
                             {v._score > 0 && <span style={{marginLeft: '0.5rem', fontSize: '0.75rem', color: '#fb923c'}}>★ {v._score}</span>}
                           </div>
                           <div style={{fontSize: '0.75rem', color: '#6b7280', marginTop: '0.25rem'}}>
-                            {v.lengthMin} min · {v.level}
+                            {v.level}
                           </div>
                           {v.intents?.length > 0 && (
                             <div style={{fontSize: '0.75rem', color: '#9ca3af', overflow: 'hidden', textOverflow: 'ellipsis', marginTop: '0.25rem'}}>
@@ -595,10 +595,6 @@ const RecommendationCard = ({ video, isPrimary, onSelect }) => {
         {/* Meta Information */}
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.875rem', color: '#9ca3af'}}>
           <div style={{display: 'flex', alignItems: 'center', gap: '1rem'}}>
-            <div style={{display: 'flex', alignItems: 'center', gap: '0.25rem'}}>
-              <Clock size={16} />
-              <span>{video.lengthMin} min</span>
-            </div>
             <div style={{display: 'flex', alignItems: 'center', gap: '0.25rem'}}>
               <User size={16} />
               <span>{video.level}</span>
