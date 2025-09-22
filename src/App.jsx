@@ -227,35 +227,39 @@ export default function YogaRecommenderApp() {
       </header>
 
       {/* Main Content */}
-      <main className="px-6 pb-12 w-full flex-1">
+      <main className="px-6 pb-12 w-full flex-1" style={{paddingLeft: 'clamp(1rem, 5vw, 1.5rem)', paddingRight: 'clamp(1rem, 5vw, 1.5rem)'}}>
         <div className="max-w-4xl mx-auto text-center" style={{paddingTop: '2rem'}}>
           
           {/* Hero Section */}
           <div style={{textAlign: 'center', marginBottom: '3rem'}}>
             <h2 style={{
-              fontSize: 'clamp(2.5rem, 8vw, 4rem)',
+              fontSize: 'clamp(2rem, 6vw, 4rem)',
               fontWeight: '300',
               marginBottom: '1.5rem',
               lineHeight: '1.1',
               color: '#374151',
-              textAlign: 'center'
+              textAlign: 'center',
+              paddingLeft: '0.5rem',
+              paddingRight: '0.5rem'
             }}>
               How are you feeling?
             </h2>
             <p style={{
-              fontSize: '1.25rem',
+              fontSize: 'clamp(1rem, 4vw, 1.25rem)',
               fontWeight: '300',
               maxWidth: '32rem',
               margin: '0 auto',
               color: '#6b7280',
-              textAlign: 'center'
+              textAlign: 'center',
+              paddingLeft: '1rem',
+              paddingRight: '1rem'
             }}>
               Check in with yourself. Share whatever comes to mind to start your practice.
             </p>
           </div>
 
           {/* Input Section */}
-          <div className="max-w-3xl mx-auto mb-16">
+          <div className="max-w-3xl mx-auto mb-16" style={{paddingLeft: '0.5rem', paddingRight: '0.5rem'}}>
             <div style={{position: 'relative'}}>
               <textarea
                 value={query}
@@ -264,8 +268,8 @@ export default function YogaRecommenderApp() {
                 style={{ 
                   width: '100%',
                   minHeight: '120px',
-                  padding: '1.5rem',
-                  fontSize: '1.125rem',
+                  padding: 'clamp(1rem, 4vw, 1.5rem)',
+                  fontSize: 'clamp(1rem, 4vw, 1.125rem)',
                   border: 'none',
                   borderRadius: '24px',
                   backgroundColor: 'rgba(255, 255, 255, 0.8)',
@@ -285,10 +289,10 @@ export default function YogaRecommenderApp() {
                 disabled={!recogRef.current}
                 style={{ 
                   position: 'absolute',
-                  bottom: '16px',
-                  right: '16px',
-                  width: '68px',
-                  height: '68px',
+                  bottom: 'clamp(8px, 3vw, 16px)',
+                  right: 'clamp(8px, 3vw, 16px)',
+                  width: 'clamp(56px, 15vw, 68px)',
+                  height: 'clamp(56px, 15vw, 68px)',
                   backgroundColor: listening ? '#ef4444' : '#f3f4f6',
                   color: listening ? 'white' : '#6b7280',
                   border: 'none',
@@ -302,7 +306,7 @@ export default function YogaRecommenderApp() {
                 }}
                 title={listening ? 'Stop listening' : 'Speak your feelings'}
               >
-                {listening ? <MicOff size={30} /> : <Mic size={30} />}
+                {listening ? <MicOff size={Math.min(30, window.innerWidth * 0.08)} /> : <Mic size={Math.min(30, window.innerWidth * 0.08)} />}
               </button>
             </div>
 
@@ -312,10 +316,10 @@ export default function YogaRecommenderApp() {
                 onClick={recommend}
                 disabled={!query.trim()}
                 style={{
-                  padding: '20px 60px',
+                  padding: 'clamp(16px, 4vw, 20px) clamp(40px, 12vw, 60px)',
                   background: `linear-gradient(135deg, ${buttonColor})`,
                   color: 'white',
-                  fontSize: '20px',
+                  fontSize: 'clamp(16px, 4vw, 20px)',
                   fontWeight: '500',
                   border: 'none',
                   borderRadius: '50px',
