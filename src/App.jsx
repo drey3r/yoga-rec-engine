@@ -307,15 +307,15 @@ export default function YogaRecommenderApp() {
             </div>
 
             {/* Recommend Button */}
-            <div className="text-center mt-8">
+            <div style={{textAlign: 'center', marginTop: '2rem'}}>
               <button
                 onClick={recommend}
                 disabled={!query.trim()}
                 style={{
-                  padding: '16px 48px',
+                  padding: '20px 60px',
                   background: `linear-gradient(135deg, ${buttonColor})`,
                   color: 'white',
-                  fontSize: '18px',
+                  fontSize: '20px',
                   fontWeight: '500',
                   border: 'none',
                   borderRadius: '50px',
