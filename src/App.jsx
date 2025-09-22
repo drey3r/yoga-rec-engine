@@ -231,13 +231,14 @@ export default function YogaRecommenderApp() {
         <div className="max-w-4xl mx-auto text-center" style={{paddingTop: '2rem'}}>
           
           {/* Hero Section */}
-          <div className="text-center mb-12">
+          <div style={{textAlign: 'center', marginBottom: '3rem'}}>
             <h2 style={{
               fontSize: 'clamp(2.5rem, 8vw, 4rem)',
               fontWeight: '300',
               marginBottom: '1.5rem',
               lineHeight: '1.1',
-              color: '#374151'
+              color: '#374151',
+              textAlign: 'center'
             }}>
               How are you feeling?
             </h2>
@@ -246,7 +247,8 @@ export default function YogaRecommenderApp() {
               fontWeight: '300',
               maxWidth: '32rem',
               margin: '0 auto',
-              color: '#6b7280'
+              color: '#6b7280',
+              textAlign: 'center'
             }}>
               Check in with yourself. Share whatever comes to mind to start your practice.
             </p>
@@ -524,11 +526,14 @@ export default function YogaRecommenderApp() {
 
       {/* Footer */}
       <footer className="pb-8 px-6 w-full">
-        <div className="max-w-4xl mx-auto text-center">
-          <p style={{color: '#9ca3af', fontSize: '14px', marginBottom: '8px'}}>
+        <div className="max-w-4xl mx-auto" style={{textAlign: 'center'}}>
+          <p style={{color: '#9ca3af', fontSize: '14px', marginBottom: '8px', textAlign: 'center'}}>
             Classes courtesy of Kanda Yoga School
           </p>
-          <p style={{color: '#d1d5db', fontSize: '12px'}}>
+          <p style={{color: '#9ca3af', fontSize: '14px', marginBottom: '8px', textAlign: 'center'}}>
+            Built by Evan
+          </p>
+          <p style={{color: '#d1d5db', fontSize: '12px', textAlign: 'center'}}>
             For educational use only; not medical advice.
           </p>
         </div>
